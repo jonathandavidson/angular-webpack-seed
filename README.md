@@ -9,3 +9,6 @@ This project is meant to provide the same utility as the official [Angular Seed]
 
 ## Usage
 ```npm run build```
+
+## License
+[MIT](http://www.opensource.org/licenses/mit-license.php)
