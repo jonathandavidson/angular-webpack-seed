@@ -8,12 +8,11 @@ This project is meant to provide the same utility as the official [Angular Seed]
 ```npm install```
 
 ## Usage
-```npm run build``` - Builds the source
+```npm run build``` - Builds the source  
 ```npm run watch``` - Builds the source and rebuilds when changes are detected
 
 ## Production Build
-```NODE_ENV=production npm run build```
-The webpack build is aware of the NODE_ENV and will build the production optimized source when the NODE_ENV is set to production.
+```NODE_ENV=production npm run build``` - The webpack build is aware of the NODE_ENV and will build the production optimized source when the NODE_ENV is set to production.
 
 ## License
 [MIT](http://www.opensource.org/licenses/mit-license.php)
