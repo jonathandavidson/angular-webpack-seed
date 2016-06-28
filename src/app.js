@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import angular from 'angular';
-import { user } from './module';
+import { world } from './example';
 
 require('./index.scss');
 
@@ -11,6 +11,6 @@ angular.
   component('greetUser', {
     template: '<p class="hello">Hello, {{$ctrl.user}}!</p>',
     controller: function GreetUserController() {
-      this.user = 'world';
+      this.user = world;
     }
   });

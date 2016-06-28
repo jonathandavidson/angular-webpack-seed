@@ -1,17 +1,17 @@
 const webpack = require('webpack');
 
 const config = {
-  devtool: 'eval',
+  devtool: 'eval-source-map',
   entry: './src/app.js',
   module: {
     loaders: [
       {
-        include: /src/,
+        exclude: /node_modules/,
         loaders: ["style", "css", "sass"],
         test: /\.scss$/
       },
       {
-        include: /src/,
+        exclude: /node_modules/,
         loader: 'babel',
         test: /\.js$/
       }
@@ -25,18 +25,23 @@ const config = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-    config.devtool = 'cheap-module-source-map';
+  config.devtool = 'source-map';
 
-    config.plugins.push(
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-        output: {
-          comments: false,
-        }
-      })
-    );
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      }
+    })
+  );
+}
+
+if (process.env.npm_lifecycle_event === 'test') {
+  config.entry = {};
+  config.devtool = 'nline-source-map';
 }
 
 module.exports = config;
