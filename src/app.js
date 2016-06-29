@@ -9,7 +9,7 @@ angular.module('myApp', []);
 angular
   .module('myApp')
   .component('greetUser', {
-    template: '<p class="hello">Hello, {{$ctrl.user}}!</p>',
+    template: require('./template.html'),
     controller: function GreetUserController() {
       this.user = world;
     }
