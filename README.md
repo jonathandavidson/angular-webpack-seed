@@ -17,5 +17,8 @@ This project is meant to provide the same utility as the official [Angular Seed]
 ## Running Tests
 ```npm run test``` - Runs the tests on the command line in PhantomJS headless browser
 
+## Lint
+```npm run lint``` - Runs eslint with the rules configured in .eslintrc
+
 ## License
 [MIT](http://www.opensource.org/licenses/mit-license.php)
